@@ -1,1 +1,19 @@
-wewew
+package task;
+
+public class Task1 {
+
+	public static void main(String[] args) {
+
+		double e = Math.E;
+		double p = Math.PI;
+		double x = 0.5;
+		double y;
+
+		
+
+		y = Math.sqrt(Math.pow(e, 2.2 * x)) - Math.abs(Math.sin(p * x / (x + (2.0 / 3.0)))) + 1.7;
+		System.out.println(y);
+	}
+
+}
+
