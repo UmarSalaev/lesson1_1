@@ -1,0 +1,35 @@
+package task;
+
+public class Task5 {
+
+	public static void main(String[] args) {
+
+		int n = 1;
+		double a = 1;
+		double functionY;
+		double e = Math.E;
+
+		System.out.println("=========================================================");
+		System.out.printf("|\t%2s\t|\t%3s\t|\t%8s\t|\n", "N", "X", "Y");
+		System.out.println("=========================================================");
+
+		for (double x = -2 * a; n <= 30; x = x + a / 5) {
+			if (x <= 0) {
+				functionY = (a / 2) * (Math.pow(e, x / a) + Math.pow(e, -x / a));
+				n++;
+
+				System.out.printf("|\t%2d\t|\t%2.2f\t|\t%2.6f\t|\n", n, x, functionY);
+
+			}
+			if (x > 0) {
+				functionY = 4 * Math.pow(a, 3) / (Math.pow(x, 2) + 4 * Math.pow(a, 2));
+				n++;
+
+				System.out.printf("|\t%d\t|\t%.2f\t|\t%.6f\t|\n", n, x, functionY);
+
+			}
+		}
+		System.out.println("=========================================================");
+	}
+
+}
