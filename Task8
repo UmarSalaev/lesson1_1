@@ -1,0 +1,29 @@
+package task;
+
+public class Task8 {
+
+	public static void main(String[] args) {
+
+		double x = 0.1;
+		double step = 0.1;
+		double y;
+		double e = Math.E;
+
+		do {
+			y = Math.pow(x, 2) - Math.pow(e, 2 * x) + 4;
+			x = x + step;
+
+			System.out.printf("x = [%.2f] y = [%.2f]\n", x, y);
+
+			if (y == 0) {
+				System.out.println("Ноль функции y будет при x =" + "[" + x + "]" );
+				break;
+			}
+			if (x > 10) {
+				System.out.printf("Конец цикла при x = [%.2f]\n", x);
+				break;
+			}
+		} while (true);
+	}
+
+}
