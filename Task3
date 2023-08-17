@@ -1,0 +1,24 @@
+package task;
+
+public class Task3 {
+
+	public static void main(String[] args) {
+		double e = Math.E;
+		double p = Math.PI;
+
+		double x = 0.5;
+		double sum = 0;
+		double n = 20.0;
+		double k = 1;
+
+		for (double i = k; i <= 20.0; i++) {
+			sum = sum + (Math.sin(x * i / 2.0) + Math.sin((i * x - 1.0) / 2.0)) / Math.pow(e, (x - 1.0 / i));
+			n = i;
+		}
+
+		double sigma;
+		sigma = Math.sqrt(n * p) * sum;
+		System.out.println(sigma);
+	}
+
+}
