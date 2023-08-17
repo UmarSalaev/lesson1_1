@@ -1,0 +1,37 @@
+package task;
+
+import java.util.Random;
+
+public class Task4 {
+
+	public static void main(String[] args) {
+		
+		Random rand = new Random();
+
+		int n = 10;
+		int counter = 0;
+
+		for (int i = 0; i <= n; i++) {
+
+			double x = rand.nextInt(10);
+			double y = rand.nextInt(10);
+
+			if ((x <= 0 & x >= -2 & y >= 0 & y <= 2) || (x >= 0 & x <= 2 & y >= -1 & y <= 1)) {
+
+				System.out.print("Точка ");
+				System.out.printf("[%4.2f][%4.2f]", x, y);
+				System.out.println(" в заданном диапазоне");
+				counter++;
+
+			} else {
+				System.out.print("Точка ");
+				System.out.printf("[%4.2f][%4.2f]", x, y);
+				System.out.println(" находится вне диапазона");
+			}
+
+		}
+
+		System.out.println("\n" + "из " + n + " точек - " + counter + " находятся в заданном диапазоне");
+
+	}
+}
